@@ -1,0 +1,211 @@
+<!-- Šį projektinį darbą kūrė Dominykas, KVK 2023 -->
+<!-- Šis kodas yra viešai prieinamas Github platformoje čia: https://github.com/landocalrissan/kvk -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Vieno puslapio svetainė - Projektinis</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script>
+      function changeImage() {
+        var newImageURL = document.getElementById("imageURL").value;
+        document.getElementById("customImage").src = newImageURL;
+      }
+    </script>
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Fotokompanija.lt</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Namai</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">Apie</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#services">Paslaugos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Kontaktai</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="container mt-5">
+        <h1>Sveiki atvyke į mūsų svetainę!</h1>
+        <p>
+          Mūsų firma užsiima įvairiomis fotosesijomis, šeimos nuotraukos,
+          vestuvių nuotraukos ar kt. įvairūs renginiai, renginių filmavimas tiek
+          su profesionalaus lygio kamera, tiek su dronu, bei profesionalus
+          vaizdo įrašų montavimas!
+        </p>
+        <div class="row">
+          <div class="col-md-4">
+            <figure>
+              <figcaption>Vestuvių fotosesijos pavyzdys</figcaption>
+              <img
+                src="https://media.istockphoto.com/id/1190043570/photo/happy-wedding-photography-of-bride-and-groom-at-wedding-ceremony-wedding-tradition-sprinkled.jpg?s=612x612&w=0&k=20&c=_aCIW5-iOIiaDdqin_50kvBcbFbIxSULHHamPUILE0c="
+                alt="Ši nuotrauka yra fluid!"
+                class="img-fluid"
+              />
+            </figure>
+          </div>
+          <div class="col-md-4">
+            <figure>
+              <figcaption>Kt. renginių fotosesijos pavyzdys</figcaption>
+              <img
+                id="secondImage"
+                src="img/foto.jpg"
+                alt="Ši nuotrauka yra nustatyto spec. dydžio!"
+                class="fixed-size"
+              />
+            </figure>
+          </div>
+          <div class="col-md-4">
+            <figure>
+              <figcaption>Vestuvių fotosesijos pavyzdys</figcaption>
+              <img
+                id="customImage"
+                src="https://media.istockphoto.com/id/1334542509/photo/elopement-wedding.webp?b=1&s=170667a&w=0&k=20&c=NUvuNML13hhpyWrKsfuHbe1EKXc1sMtiqlcsEFvorc4="
+                alt="Ši nuotrauka yra fluid!"
+                class="img-fluid"
+              />
+            </figure>
+            <form onsubmit="event.preventDefault(); changeImage();">
+              <label for="imageURL">Įklijuokite nuotraukos URL:</label>
+              <input type="text" id="imageURL" name="imageURL" required />
+              <input type="submit" value="Pakeisti nuotrauką" />
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="container mt-5">
+        <h2>Apie mus</h2>
+        <p>
+          Mūsų kompanija įkurta 2022 metais siekia suteikti Lietuvos piliečiams
+          laisvai prieinamas fotosesijas ir kt. multimedijos paslaugas!
+        </p>
+      </section>
+
+      <section id="services" class="container mt-5">
+        <figure>
+          <figcaption>Mūsų paslaugos</figcaption>
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col" rowspan="2">Paslauga</th>
+                <th scope="col" colspan="2">Aprašymas</th>
+                <th scope="col" rowspan="1">Kaina</th>
+              </tr>
+              <tr>
+                <th scope="col">Tipas</th>
+                <th scope="col">Detaliau</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td rowspan="2">Fotosesijos</td>
+                <td>Fotosesija</td>
+                <td>Vestuvių (1val.)</td>
+                <td rowspan="1">200€</td>
+              </tr>
+              <tr class="second-row">
+                <td>Fotosesija</td>
+                <td>Kt. renginiai (2val.)</td>
+                <td rowspan="1">200€</td>
+              </tr>
+              <tr>
+                <td rowspan="2">Filmavimas</td>
+                <td>Filmavimas</td>
+                <td>Filmavimas su kamera (2val.)</td>
+                <td rowspan="1">250€</td>
+              </tr>
+              <tr class="second-row">
+                <td>Filmavimas</td>
+                <td>Filmavimas su kamera ir dronu (1val.)</td>
+                <td rowspan="1">350€</td>
+              </tr>
+              <tr>
+                <td rowspan="2">Vaizdo įrašų redagavimas</td>
+                <td>Vaizdo įrašų redagavimas</td>
+                <td>Profesionalus redagavimas pagal jūsų pateiktus norus</td>
+                <td rowspan="1">400€</td>
+              </tr>
+              <tr class="second-row">
+                <td>Vaizdo įrašų redagavimas</td>
+                <td>
+                  Profesionalus vaizdo įrašų redagavimas su jums spec. sukurtais
+                  efektais.
+                </td>
+                <td rowspan="1">500€</td>
+              </tr>
+            </tbody>
+          </table>
+        </figure>
+      </section>
+
+      <section id="contact" class="container mt-5">
+        <h2>Susisiekite su mumis</h2>
+        <form>
+          <div class="form-group">
+            <label for="name">Vardas ir Pavardė:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              class="form-control"
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">El. paštas:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              class="form-control"
+            />
+          </div>
+          <div class="form-group">
+            <label for="message">Žinutė:</label>
+            <textarea
+              id="message"
+              name="message"
+              required
+              class="form-control"
+            ></textarea>
+          </div>
+          <input type="submit" value="Susisiekite" class="btn btn-primary" />
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2023 Fotokompanija.lt</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,78 @@
+<!-- Šį projektinį darbą kūrė Dominykas, KVK 2023 -->
+<!-- Šis kodas yra viešai prieinamas Github platformoje čia: https://github.com/landocalrissan/kvk -->
+<!DOCTYPE html>
+<html lang="lt">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Klausimynas</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="quiz-container">
+      <h2 id="question"></h2>
+      <div class="options"></div>
+      <button id="nextButton">Sekantis</button>
+      <button id="explanationButton" onclick="openPopup()">Paaiškinimas</button>
+      <p class="score" id="score"></p>
+      <p class="result" id="result"></p>
+    </div>
+    <div class="popup" id="popup">
+      <h2>Klausimynas</h2>
+      <p>
+        Šio klausimyno prasmė yra įvertinti jūsų bendrų žinių turėjimą iš
+        įvairių temų.
+      </p>
+      <p>
+        Šį klausimyną jūs galite modifikuoti ir pridėti savo klausimų vidiniame
+        quiz.js faile.
+      </p>
+      <p>
+        Šis klausimynas turi sunkumo lygius, kuris keičiasi pagal surinktą taškų
+        skaičių. Šiuo metu šis klausimynas turi 4 lengvus klausimus, 4 vidutinio
+        sunkumo klausimus ir 2 sunkius klausimus. Kurių bendra taškų suma yra
+        100 taškų.
+      </p>
+      <p>
+        Sunkumo lygiai:<br />
+        Lengvas - prasideda nuo lengvojo ir surinkus 40 taškų (atsakius į 4
+        teisingus klausimus) automatiškai jums bus teikiami ir vidutinio sunkumo
+        lygio klausimai.<br />
+        Vidutinis - Prasideda nuo 40 taškų ir tęsiasi iki 80-ies taškų. Atsakius
+        į 4 teisingus vidutinio sunkumo klausimus, atversite paskutinius 2
+        sunkius klausimus.<br />
+        Sunkus - paskutiniai du klausimai, į kuriuos jeigu atsakysite teisingai
+        surinksite 100 taškų!
+      </p>
+      <p>
+        Iš pradžių klausimynas jums teteiks lengvus klausimus, nesugebėjus
+        atsakyti į keturis teisingus atsakymus ir nesurinkus 40 taškų -
+        klausimynas užsibaigs, kadangi neatsirakinote kito sunkumo lygio.
+      </p>
+      <p>
+        Šio klausimyno sukūrimo esmė yra pritaikyti įvairias JavaScript
+        funkcijas atliekant projektinį darbą. Šį darbas skirtas Klaipėdos
+        valstybinei kolegijai.
+      </p>
+      <button type="button" onclick="closePopup()">OK</button>
+    </div>
+
+    <script>
+      // Vidinis skript blokas pagal reikalavimus
+      window.onload = function () {
+        // Pridedam įvykių listenerį prie mygtuko
+        document
+          .getElementById("nextButton")
+          .addEventListener("click", startQuiz);
+      };
+      let popup = document.getElementById("popup");
+      function openPopup() {
+        popup.classList.add("open-popup");
+      }
+      function closePopup() {
+        popup.classList.remove("open-popup");
+      }
+    </script>
+
+    <script src="quiz.js"></script>
+  </body>
+</html>

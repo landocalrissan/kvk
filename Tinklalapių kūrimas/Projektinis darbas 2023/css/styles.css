@@ -1,0 +1,108 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 15px;
+  padding: 15px;
+}
+
+.grid-item {
+  background-color: #f1f1f1;
+  padding: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+form label {
+  margin-bottom: 10px;
+}
+
+form input {
+  margin-bottom: 15px;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin-top: 15px;
+}
+
+.fixed-size {
+  width: 350px;
+  height: auto;
+  object-fit: cover;
+}
+
+.img-fluid {
+  width: 100%;
+  height: auto;
+}
+
+/* Stilius lentelei */
+figure {
+  margin: 1.5em 0;
+}
+
+figcaption {
+  padding: 0.5em 0;
+  text-align: center;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+/* Stilius lentelės header */
+table th {
+  text-align: center;
+  font-weight: bold;
+  background-color: #f0f0f0;
+}
+
+.second-row {
+  position: sticky;
+  top: 0;
+  background-color: #f0f0f0;
+}
+
+/* Lentelės eilučių stiliai */
+table tr:nth-child(even) {
+  background-color: #f8f8f8;
+}
+
+table tr:hover {
+  background-color: #e0e0e0;
+}
